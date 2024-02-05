@@ -23,8 +23,8 @@ local function GenerateSerial(text)
 end
 
 -- Event handler to open a backpack
-RegisterServerEvent('ox_backpack:openBackpack')
-AddEventHandler('ox_backpack:openBackpack', function(identifier)
+RegisterServerEvent('backpack:openBackpack')
+AddEventHandler('backpack:openBackpack', function(identifier)
     if not registeredStashes[identifier] then
         ox_inventory:RegisterStash('bag_' .. identifier, 'Backpack', Config.BackpackStorage.slots, Config.BackpackStorage.weight, false)
         registeredStashes[identifier] = true
@@ -32,7 +32,7 @@ AddEventHandler('ox_backpack:openBackpack', function(identifier)
 end)
 
 -- Callback to get a new identifier for a backpack
-lib.callback.register('ox_backpack:getNewIdentifier', function(source, slot)
+lib.callback.register('backpack:getNewIdentifier', function(source, slot)
     local newId = GenerateSerial()
     ox_inventory:SetMetadata(source, slot, { identifier = newId })
     ox_inventory:RegisterStash('bag_' .. newId, 'Backpack', Config.BackpackStorage.slots, Config.BackpackStorage.weight, false)

@@ -63,10 +63,10 @@ end)
 -- Export the function to open the backpack
 exports('openBackpack', function(data, slot)
     if not slot or not slot.metadata or not slot.metadata.identifier then
-        local identifier = lib.callback.await('ox_backpack:getNewIdentifier', 100, data.slot)
+        local identifier = lib.callback.await('backpack:getNewIdentifier', 100, data.slot)
         ox_inventory:openInventory('stash', 'bag_'..identifier)
     else
-        TriggerServerEvent('ox_backpack:openBackpack', slot.metadata.identifier)
+        TriggerServerEvent('backpack:openBackpack', slot.metadata.identifier)
         ox_inventory:openInventory('stash', 'bag_'..slot.metadata.identifier)
     end
 end)
