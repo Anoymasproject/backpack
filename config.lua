@@ -1,6 +1,3 @@
------------------For support, scripts, and more----------------
---------------- https://discord.gg/wasabiscripts  -------------
----------------------------------------------------------------
 Config = {}
 
 Config.checkForUpdates = true -- Check for updates?
