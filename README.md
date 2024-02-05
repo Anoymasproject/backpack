@@ -14,6 +14,6 @@ item to add in ox_inventory
 		stack = false,
 		consume = 0,
 		client = {
-			export = 'ox_backpack.openBackpack'
+			export = 'backpack.openBackpack'
 		}
 	},
