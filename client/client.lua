@@ -17,7 +17,7 @@ end
 local saveSkin = function()
     Wait(100)
     TriggerEvent('skinchanger:getSkin', function(skin)
-        TriggerServerEvent('ox_backpack:save', skin)
+        TriggerServerEvent('backpack:save', skin)
     end)
 end
 
