@@ -5,8 +5,8 @@ Config.checkForUpdates = true -- Check for updates?
 Config.OneBagInInventory = true -- Allow only one bag in inventory?
 
 Config.BackpackStorage = {
-    slots = 15, -- Slots of backpack storage
-    weight = 10000, -- Total weight for backpack
+    slots = 15,
+    weight = 10000,
     Uniform = {
         Male = {
             ['bags_1'] = 82,
@@ -16,6 +16,7 @@ Config.BackpackStorage = {
         }
     },
 }
+
 
 Config.CleanUniform = {
     Male = {
